@@ -1,5 +1,6 @@
 // app/movies/page.tsx
 import React from 'react';
+import './movies-styles.css';
 
 type Movie = {
     id: number;
@@ -30,16 +31,16 @@ const MoviesPage = async () => {
         <div>
             <h1>Movies Page</h1>
             {movies.length === 0 ? (
-                <p>Фильмы не найдены.</p>
+                <p>No movies found</p>
             ) : (
-                <ul>
+                <div className={'movies-container'}>
                     {movies.map((movie) => (
-                        <li key={movie.id}>
+                        <div className={'movie-box'} key={movie.id}>
                             <h2>{movie.title}</h2>
                             <p>{movie.overview}</p>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             )}
         </div>
     );
