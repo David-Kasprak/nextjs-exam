@@ -1,6 +1,27 @@
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
 .movies-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 .movie-box {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    background-color: lightgrey;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+.movie-poster {
+    width: 400px;
+    border-radius: 20px;
 
 }
