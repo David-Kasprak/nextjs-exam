@@ -9,7 +9,7 @@ const MenuComponent = () => {
                     <Link href={'/movies'}>Movies</Link>
                 </li>
                 <li>
-                    <Link href={'/movie'}>Movie</Link>
+                    <Link href={'/genres'}>Genres</Link>
                 </li>
             </ul>
         </div>

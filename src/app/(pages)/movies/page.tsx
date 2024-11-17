@@ -55,6 +55,7 @@ import React from 'react';
 import './movies-styles.css';
 import Pagination from "@/app/(components)/pagination/PaginationComponent";
 import Link from "next/link";
+import {getGenres} from "@/app/(services)/api.services";
 
 type Movie = {
     id: number;
@@ -103,16 +104,30 @@ const MoviesPage = async ({ searchParams }: { searchParams: { page?: string } })
             ) : (
                 <div className={'movies-container'}>
                     {movies.map((movie) => (
-                        <div className={'movie-box'} key={movie.id}>
-                            <img
-                                className={'movie-poster'}
-                                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                                alt={movie.title}
-                            />
-                            <h2>{movie.title}</h2>
-                            <p>{movie.overview}</p>
-                            <Link href={`/movies/${movie.id}`}>More details</Link>
-                        </div>
+                        // <div className={'movie-box'} key={movie.id}>
+                        //     <img
+                        //         className={'movie-poster'}
+                        //         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        //         alt={movie.title}
+                        //     />
+                        //     <h2>{movie.title}</h2>
+                        //     <p>{movie.overview}</p>
+                        //     <Link href={`/movies/${movie.id}`}>More details</Link>
+                        // </div>
+                        <Link
+                            key={movie.id}
+                            href={`/movies/${movie.id}`}
+                        >
+                            <div className={'movie-box'}>
+                                <img
+                                    className={'movie-poster'}
+                                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                                    alt={movie.title}
+                                />
+                                <h2>{movie.title}</h2>
+                                <p>{movie.overview}</p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             )}

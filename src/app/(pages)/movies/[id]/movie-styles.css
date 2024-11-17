@@ -2,26 +2,46 @@
     display: flex;
     background-color: lightgrey;
     padding: 10px 10px 10px 10px;
+    gap: 20px;
+    border-radius: 20px;
 }
 .movie-info {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
+    font-size: 24px;
 }
 /*/----------------------------------*Text formatting*!*/
 .movie-container p {
     background-color: whitesmoke;
+    padding: 4px;
+    border-radius: 10px;
+
 }
 .movie-info span {
     font-weight: bold;
 }
 .movie-info h3 {
-    padding: 0;
+    padding: 4px;
     margin: 0;
+    background-color: whitesmoke;
+    width: 98px;
+    border-radius: 10px;
+}
+.movie-info ul li {
+    background-color: whitesmoke;
+    margin-top: 4px;
+    border-radius: 10px;
+    padding: 4px;
 }
 /*/----------------------------------*Image container*!*/
 .movie-image-container {
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: flex-end;
+}
+.movie-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
