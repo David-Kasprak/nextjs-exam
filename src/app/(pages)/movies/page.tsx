@@ -54,6 +54,7 @@
 import React from 'react';
 import './movies-styles.css';
 import Pagination from "@/app/(components)/pagination/PaginationComponent";
+import Link from "next/link";
 
 type Movie = {
     id: number;
@@ -91,7 +92,6 @@ const MoviesPage = async ({ searchParams }: { searchParams: { page?: string } })
         options
     );
     const data: MovieData = await response.json();
-
     const movies = data.results || [];
     const totalPages = data.total_pages || 1;
 
@@ -111,13 +111,14 @@ const MoviesPage = async ({ searchParams }: { searchParams: { page?: string } })
                             />
                             <h2>{movie.title}</h2>
                             <p>{movie.overview}</p>
+                            <Link href={`/movies/${movie.id}`}>More details</Link>
                         </div>
                     ))}
                 </div>
             )}
-
-            {/* Пагинация */}
-            <Pagination currentPage={page} totalPages={totalPages} />
+            <div>
+                <Pagination currentPage={page} totalPages={totalPages} />
+            </div>
         </div>
     );
 };
