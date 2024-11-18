@@ -1,5 +1,3 @@
-//
-
 import React, { FC } from 'react';
 import {IGenresResponse} from "@/app/(models)/IGenres";
 
@@ -9,9 +7,9 @@ const GenreComponent: FC<IGenresResponse> = ({ genres }) => {
     // }
 
     return (
-        <div>
+        <div className={'genres-container'}>
             {genres.map(({ id, name }) => (
-                <div key={id}>
+                <div className={'genre-box'} key={id}>
                     <p>{name}</p>
                 </div>
             ))}

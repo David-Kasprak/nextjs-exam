@@ -6,7 +6,7 @@ const MenuComponent = () => {
         <div>
             <ul>
                 <li>
-                    <Link href={'/movies'}>Movies</Link>
+                    <Link href={'/movies'}>All Movies</Link>
                 </li>
                 <li>
                     <Link href={'/genres'}>Genres</Link>

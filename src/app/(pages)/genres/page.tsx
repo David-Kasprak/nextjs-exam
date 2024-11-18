@@ -26,6 +26,7 @@
 
 import React from 'react';
 import GenreComponent from "@/app/(components)/genre/GenreComponent";
+import './genres-styles.css';
 
 const options = {
     method: 'GET',
@@ -43,8 +44,10 @@ const GenresPage = async () => {
 
     return (
         <div>
-            GenresPage
-            <GenreComponent genres={genres} />
+            <h1>Genres</h1>
+            <div>
+                <GenreComponent genres={genres} />
+            </div>
         </div>
     );
 };
