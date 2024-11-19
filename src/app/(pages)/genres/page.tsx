@@ -39,7 +39,6 @@ const options = {
 const GenresPage = async () => {
     const response = await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
         .then(value => value.json());
-    // Извлекаем массив genres из объекта
     const genres = response.genres;
 
     return (
