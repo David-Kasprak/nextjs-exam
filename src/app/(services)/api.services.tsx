@@ -1,3 +1,5 @@
+import {IGenresResponse} from "@/app/(models)/IGenres";
+
 const options = {
     method: 'GET',
     headers: {
@@ -6,9 +8,10 @@ const options = {
     }
 };
 
-const getGenres = () => {
-    fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
-        .then(value => value.json())
+const getGenres = async ():Promise<IGenresResponse> => {
+    const response = await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options);
+    const data: IGenresResponse = await response.json();
+    return data;
 };
 
 export {

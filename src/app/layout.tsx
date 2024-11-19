@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import MenuComponent from "@/app/(components)/menu/MenuComponent";
+import MenuComponent from "@/app/(components)/menu/HeaderComponent";
 
 export const metadata: Metadata = {
   title: "Movies DB",
