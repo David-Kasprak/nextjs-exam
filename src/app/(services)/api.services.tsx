@@ -1,4 +1,4 @@
-import {IGenresResponse} from "@/app/(models)/IGenres";
+import {IGenre, IGenresResponse} from "@/app/(models)/IGenres";
 
 const options = {
     method: 'GET',
@@ -8,7 +8,7 @@ const options = {
     }
 };
 
-const getGenres = async ():Promise<IGenresResponse> => {
+const getGenres = async (): Promise<IGenresResponse> => {
     const response = await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options);
     const data: IGenresResponse = await response.json();
     return data;
