@@ -1,7 +1,6 @@
 import React from 'react';
 import {options} from "@/app/(constants)/constants";
 import {MovieData} from "@/app/(models)/MovieTypes";
-import Link from "next/link";
 import PaginationForGenreComponent from "@/app/(components)/paginationForGenre/PaginationForGenreComponent";
 import {IGenre} from "@/app/(models)/IGenres";
 import MovieCardComponent from "@/app/(components)/movieCard/MovieCardComponent";
