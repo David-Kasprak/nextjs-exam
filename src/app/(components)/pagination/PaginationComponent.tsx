@@ -9,7 +9,7 @@ type PaginationProps = {
     totalPages: number;
 };
 
-const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
+const PaginationComponent: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
     const router = useRouter();
 
     const goToPage = (page: number) => {
@@ -38,4 +38,4 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
     );
 };
 
-export default Pagination;
+export default PaginationComponent;

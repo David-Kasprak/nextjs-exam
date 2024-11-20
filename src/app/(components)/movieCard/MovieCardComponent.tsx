@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Link from "next/link";
 import {MovieData} from "@/app/(models)/MovieTypes";
+import StarsRatingComponent from "@/app/(components)/starsRating/StarsRatingComponent";
 
 const MovieCardComponent: FC<MovieData> = ({ results }) => {
     return (
@@ -18,6 +19,7 @@ const MovieCardComponent: FC<MovieData> = ({ results }) => {
                         />
                         <h2>{movie.title}</h2>
                         <p>{movie.overview}</p>
+                        <StarsRatingComponent rating={movie.vote_average} maxRating={5}/>
                     </div>
                 </Link>
             ))}

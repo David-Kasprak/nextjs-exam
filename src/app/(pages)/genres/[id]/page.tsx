@@ -4,6 +4,7 @@ import {MovieData} from "@/app/(models)/MovieTypes";
 import Link from "next/link";
 import PaginationForGenreComponent from "@/app/(components)/paginationForGenre/PaginationForGenreComponent";
 import {IGenre} from "@/app/(models)/IGenres";
+import MovieCardComponent from "@/app/(components)/movieCard/MovieCardComponent";
 
 const GenrePage = async ({params, searchParams}:{params:{id:string}, searchParams: {page?: string}}) => {
     const genreId = params.id;
@@ -21,24 +22,7 @@ const GenrePage = async ({params, searchParams}:{params:{id:string}, searchParam
     return (
         <div>
             <h1>Movies in Genre: {genreName}</h1>
-                <div className={'movies-container'}>
-                    {movies.map((movie) => (
-                        <Link
-                            key={movie.id}
-                            href={`/movies/${movie.id}`}
-                        >
-                            <div className={'movie-box'}>
-                                <img
-                                    className={'movie-poster'}
-                                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                                    alt={movie.title}
-                                />
-                                <h2>{movie.title}</h2>
-                                <p>{movie.overview}</p>
-                            </div>
-                        </Link>
-                    ))}
-                </div>)
+            <MovieCardComponent results={movies} total_pages={totalPages} page={page}/>
             <PaginationForGenreComponent currentPage={page} totalPages={totalPages} genreId={genreId}/>
         </div>
     );
