@@ -18,3 +18,14 @@ export type MoviesPageProps = {
     totalPages: number;
     currentPage: number;
 };
+
+export type MovieTypeForSingleMovie = {
+    id: number;
+    title: string;
+    overview: string;
+    poster_path: string;
+    release_date: string;
+    vote_average: number;
+    genres: { name: string }[];
+    original_language: string
+};

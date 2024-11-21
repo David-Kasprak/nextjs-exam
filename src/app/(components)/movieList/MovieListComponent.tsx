@@ -1,11 +1,9 @@
-import React, {FC} from 'react';
-import {MovieData} from "@/app/(models)/MovieTypes";
+import React from 'react';
 
-const MovieListComponent:FC<MovieData> = ({results}) => {
-
+const MovieListComponent = () => {
     return (
         <div>
-
+            
         </div>
     );
 };

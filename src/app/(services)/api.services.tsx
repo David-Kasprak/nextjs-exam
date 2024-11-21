@@ -8,10 +8,10 @@ const options = {
     }
 };
 
-const getGenres = async (): Promise<IGenresResponse> => {
+const getGenres = async (): Promise<IGenre[]> => {
     const response = await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options);
     const data: IGenresResponse = await response.json();
-    return data;
+    return data.genres;
 };
 
 export {

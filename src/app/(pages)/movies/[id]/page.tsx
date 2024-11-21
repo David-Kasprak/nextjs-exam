@@ -1,33 +1,9 @@
-// import React from 'react';
-//
-// const MoviePage = () => {
-//     return (
-//         <div>
-//             MoviePage
-//         </div>
-//     );
-// };
-//
-// export default MoviePage;
-
-// app/movies/[id]/page.tsx
-
 import React from 'react';
 import './movie-styles.css';
-
-type Movie = {
-    id: number;
-    title: string;
-    overview: string;
-    poster_path: string;
-    release_date: string;
-    vote_average: number;
-    genres: { name: string }[];
-    original_language: string
-};
+import {MovieTypeForSingleMovie} from "@/app/(models)/MovieTypes";
 
 type MoviePageProps = {
-    movie: Movie;
+    movie: MovieTypeForSingleMovie;
 };
 
 type Params = {
@@ -45,13 +21,12 @@ const MoviePage = async ({params}: {params: Params}) => {
         },
     };
 
-    // Делаем запрос к API для получения данных по фильму
     const response = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}`,
         options
     );
 
-    const movie: Movie = await response.json();
+    const movie: MovieTypeForSingleMovie = await response.json();
 
     return (
         <div className="movie-page">
