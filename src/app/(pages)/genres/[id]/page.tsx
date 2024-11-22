@@ -16,11 +16,11 @@ const GenrePage = async ({params, searchParams}:{params:{id:string}, searchParam
 
     const genreResponse = await fetch(`https://api.themoviedb.org/3/genre/movie/list?language=en`, options);
     const genreData = await genreResponse.json();
-    const genreName = genreData.genres.find((genre: IGenre) => genre.id === parseInt(genreId))?.name || "Unknown Genre";
+    const genreName = genreData.genres.find((genre: IGenre) => genre.id === parseInt(genreId))?.name;
 
     return (
         <div>
-            <h1>Movies in Genre: {genreName}</h1>
+            <h1>Movies in Genre: <i>{genreName}</i></h1>
             <MovieCardComponent results={movies} total_pages={totalPages} page={page}/>
             <PaginationForGenreComponent currentPage={page} totalPages={totalPages} genreId={genreId}/>
         </div>

@@ -18,7 +18,7 @@ const PaginationComponent: React.FC<PaginationProps> = ({ currentPage, totalPage
     };
 
     return (
-        <div className="pagination">
+        <div className="pagination-container">
             <button
                 disabled={currentPage === 1}
                 onClick={() => goToPage(currentPage - 1)}

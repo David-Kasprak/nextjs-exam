@@ -25,3 +25,7 @@
 .menu-user-icons-container img {
     height: 50px;
 }
+.menu-heading-container a {
+    text-decoration: none;
+    color: black;
+}

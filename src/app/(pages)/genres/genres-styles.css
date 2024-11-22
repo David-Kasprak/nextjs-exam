@@ -1,0 +1,23 @@
+.genres-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+}
+.genres-container a {
+    text-decoration: none;
+}
+.genre-box {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: #252525;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.genre-box p {
+    color: whitesmoke;
+}

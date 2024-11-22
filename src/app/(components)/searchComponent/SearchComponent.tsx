@@ -6,15 +6,15 @@ type SearchComponentType = {
 
 const SearchComponent:FC<SearchComponentType> = ({query}) => {
     return (
-        <div>
+        <div className={'search-container'}>
             <form action="/movies" method="get">
-                <input
+                <input className={'search-input'}
                     type="text"
                     name="query"
                     defaultValue={query}
                     placeholder="Search for movies"
                 />
-                <button type={'submit'}>Search</button>
+                <button className={'search-button'} type={'submit'}>Search</button>
             </form>
         </div>
     );

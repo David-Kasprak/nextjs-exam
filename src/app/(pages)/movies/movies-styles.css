@@ -1,8 +1,13 @@
-/** {*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*    box-sizing: border-box;*/
-/*}*/
+.movies-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movies-page a {
+    text-decoration: none;
+    color: black;
+}
 .movies-container {
     display: flex;
     flex-wrap: wrap;
@@ -29,4 +34,48 @@
 .movie-poster {
     width: 100%;
     border-radius: 20px;
+}
+/*------------------------Search Component*/
+.search-container {
+    margin-bottom: 20px;
+    width: 30%;
+}
+.search-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.search-input {
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.search-button {
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+/*----------------------------- Pagination Component*/
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: lightgrey;
+    width: 30%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.pagination-container button {
+    font-size: 16px;
+    height: 100%;
+    width: 30%;
+    border-radius: 8px;
+    border: none;
+}
+.pagination-container button:hover {
+    background-color: silver;
 }

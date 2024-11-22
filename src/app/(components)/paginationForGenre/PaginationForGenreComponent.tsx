@@ -19,7 +19,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, genreI
     };
 
     return (
-        <div className="pagination">
+        <div className="pagination-container">
             <button
                 disabled={currentPage === 1}
                 onClick={() => goToPage(currentPage - 1)}

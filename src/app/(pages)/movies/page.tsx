@@ -5,6 +5,7 @@ import {MovieData} from "@/app/(models)/MovieTypes";
 import MovieCardComponent from "@/app/(components)/movieCard/MovieCardComponent";
 import SearchComponent from "@/app/(components)/searchComponent/SearchComponent";
 import PaginationComponent from "@/app/(components)/pagination/PaginationComponent";
+import Link from "next/link";
 
 const MoviesPage = async ({ searchParams }: { searchParams: { page?: string, query?: string } }) => {
     const page = searchParams.page ? parseInt(searchParams.page) : 1;
@@ -19,8 +20,10 @@ const MoviesPage = async ({ searchParams }: { searchParams: { page?: string, que
     const totalPages = data.total_pages || 1;
 
     return (
-        <div>
-            <h1>Movies Page</h1>
+        <div className={'movies-page'}>
+            <Link href={'/movies'}>
+            <h1>All Movies Page</h1>
+            </Link>
             <SearchComponent query={query}/>
             <MovieCardComponent results={movies} total_pages={totalPages} page={page}/>
             <PaginationComponent currentPage={page} totalPages={totalPages}/>
