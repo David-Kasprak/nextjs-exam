@@ -4,6 +4,7 @@ import {MovieData} from "@/app/(models)/MovieTypes";
 import StarsRatingComponent from "@/app/(components)/starsRating/StarsRatingComponent";
 import MoviePosterComponent from "@/app/(components)/moviePoster/MoviePosterComponent";
 import MovieInfoComponent from "@/app/(components)/movieInfo/MovieInfoComponent";
+import {getGenreName} from "@/app/(helpers)/helpers";
 
 const MovieCardComponent: FC<MovieData> = ({ results }) => {
     return (
@@ -17,7 +18,9 @@ const MovieCardComponent: FC<MovieData> = ({ results }) => {
                         <MoviePosterComponent title={movie.title} poster_path={movie.poster_path}/>
                         <MovieInfoComponent title={movie.title} overview={movie.overview}/>
                         <StarsRatingComponent rating={movie.vote_average} maxRating={5}/>
-                        <div>{movie.genre_ids.map((genreId) => (<span>{genreId} </span>))}</div>
+                        {movie.genre_ids.map((genreId) => (
+                            <span key={genreId}>{getGenreName(genreId)} </span>
+                        ))}
                     </div>
                 </Link>
             ))}
