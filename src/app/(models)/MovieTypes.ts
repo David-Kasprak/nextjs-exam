@@ -1,6 +1,3 @@
-import MovieCardForSingleMovieComponent
-    from "@/app/(components)/movieCardForSingleMovie/MovieCardForSingleMovieComponent";
-
 export type MovieTypes = {
     id: number;
     title: string;
