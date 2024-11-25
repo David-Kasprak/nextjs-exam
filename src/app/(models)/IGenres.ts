@@ -10,3 +10,7 @@ export interface IGenresResponse {
 export interface IGenreBadgeProps {
     genreName: string;
 }
+
+export interface IGenreBadge {
+    genre_ids: number[]
+}

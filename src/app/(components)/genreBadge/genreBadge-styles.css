@@ -1,12 +1,13 @@
 .genre-badge {
     display: inline-block;
     padding: 5px 10px;
-    font-size: 14px;
-    background-color: #e0e0e0;
+    font-size: 16px;
+    background-color: #e8e8e8;
     color: #333;
     border-radius: 12px;
     border: 1px solid #ccc;
     margin-right: 8px;
+    margin-top: 10px;
     text-transform: capitalize;
 }
 .genre-badge:hover {
